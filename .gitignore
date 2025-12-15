@@ -1,0 +1,49 @@
+# =============================
+# .gitignore for HTML / CSS / JS website
+# Hosting: GitHub Pages
+# No frameworks, no npm
+# =============================
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment files (future-proofing)
+.env
+.env.local
+
+# Node / npm (ignored even if accidentally added later)
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn.lock
+
+# Build / cache folders (not needed for static sites)
+dist/
+build/
+.cache/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Backup files
+*.bak
+
+# =============================
+# NOTE:
+# Do NOT ignore:
+# index.html
+# gallery.html
+# contact.html
+# css/
+# js/
+# assets/
+# =============================
