@@ -1,14 +1,14 @@
 #!/bin/bash
 # ==================================================
-# deploy-sync-gh-pages.sh
+# deploy-master-gh-pages.sh
 # --------------------------------------------------
 # Purpose:
-# - Sync master and gh-pages bidirectionally
-# - Ensure branches mirror each other
-# - Show colored output and live URL
-# - Auto-update footer year via date.js
-# - Stage changes and ask for commit message
-# --------------------------------------------------
+# - Push changes to master and gh-pages
+# - Ensure gh-pages always mirrors master
+# - Ensure master is default branch
+# - Show error messages, current branch, and live URL
+# - Auto-update footer year
+# ==================================================
 
 # -----------------------------
 # Color definitions
@@ -46,52 +46,58 @@ for branch in $MASTER_BRANCH $GH_PAGES_BRANCH; do
   fi
 done
 
-# Stage all changes
-log_info "Staging all changes..."
-git add .
+# Show current branch
+CURRENT_BRANCH=$(git branch --show-current)
+log_info "Current branch: $CURRENT_BRANCH"
 
-# Ask for commit message
-read -p "Enter commit message: " COMMIT_MSG
-if [ -z "$COMMIT_MSG" ]; then
-  COMMIT_MSG="Update site"
+# Ensure clean working tree
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  log_warn "Uncommitted changes detected. Staging and committing..."
+  git add .
+  read -p "Enter commit message (default: Update site): " COMMIT_MSG
+  COMMIT_MSG=${COMMIT_MSG:-"Update site"}
+  git commit -m "$COMMIT_MSG" || log_info "No changes to commit."
 fi
 
-# Commit changes
-git commit -m "$COMMIT_MSG" || log_info "No changes to commit."
+# -----------------------------
+# Push master
+# -----------------------------
+log_info "Switching to master branch..."
+git checkout $MASTER_BRANCH || log_error "Failed to switch to master."
 
-# Pull latest changes
-log_info "Pulling latest changes from origin/$MASTER_BRANCH..."
-git checkout $MASTER_BRANCH
+log_info "Pulling latest master..."
 git pull origin $MASTER_BRANCH || log_error "Failed to pull master."
-log_info "Pulling latest changes from origin/$GH_PAGES_BRANCH..."
-git checkout $GH_PAGES_BRANCH
-git pull origin $GH_PAGES_BRANCH || log_error "Failed to pull gh-pages."
 
-# Compare branches
-log_info "Checking if branches are in sync..."
-SYNC_STATUS=$(git log --oneline $MASTER_BRANCH..$GH_PAGES_BRANCH)
-if [ -z "$SYNC_STATUS" ]; then
-  log_success "Branches are already in sync."
-else
-  log_warn "Branches differ. Syncing gh-pages with master..."
-  git checkout $GH_PAGES_BRANCH || log_error "Failed to switch to gh-pages."
-  git reset --hard $MASTER_BRANCH || log_error "Failed to reset gh-pages to master."
-  git push origin $GH_PAGES_BRANCH --force || log_error "Failed to push gh-pages."
-  log_success "gh-pages synced with master."
-fi
+log_info "Pushing master to origin..."
+git push origin $MASTER_BRANCH || log_error "Failed to push master."
 
-# Optional: auto-update footer year
+# -----------------------------
+# Sync gh-pages to master
+# -----------------------------
+log_info "Switching to gh-pages branch..."
+git checkout $GH_PAGES_BRANCH || log_error "Failed to switch to gh-pages."
+
+log_info "Resetting gh-pages to match master..."
+git reset --hard $MASTER_BRANCH || log_error "Failed to reset gh-pages."
+
+log_info "Pushing gh-pages to origin..."
+git push origin $GH_PAGES_BRANCH --force || log_error "Failed to push gh-pages."
+
+# -----------------------------
+# Auto-update footer year
+# -----------------------------
 for file in index.html gallery.html contact.html; do
   if [ -f "$file" ]; then
     sed -i "s/© [0-9]\{4\}/© $(date +%Y)/" "$file"
   fi
- done
+done
 
 # Return to master
-git checkout $MASTER_BRANCH
-log_success "Returned to master branch."
+git checkout $MASTER_BRANCH || log_warn "Could not switch back to master."
 
-# Display live URL
+# -----------------------------
+# Display live GitHub Pages URL
+# -----------------------------
 ORIGIN_URL=$(git config --get remote.origin.url)
 CLEAN_URL=$(echo "$ORIGIN_URL" | sed -E 's#(https://|git@)##; s#.*github.com[:/]##; s#\.git$##')
 GITHUB_USER=$(echo "$CLEAN_URL" | cut -d'/' -f1)
@@ -107,5 +113,5 @@ else
 fi
 
 # -----------------------------
-# End of deploy-sync-gh-pages.sh
+# End of deploy-master-gh-pages.sh
 # -----------------------------
