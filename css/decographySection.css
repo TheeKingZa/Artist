@@ -1,0 +1,128 @@
+/* =====================================================
+   Discography Section Styles
+   File: discographySection.css
+   ===================================================== */
+
+/* Main discography wrapper */
+.discography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  padding: 4rem 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Section title */
+.discography h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
+/* Group wrapper (Albums / Singles) */
+.release-group {
+  margin-bottom: 3rem;
+}
+
+/* Group titles */
+.release-group h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Individual release card */
+.release-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  /* Card look */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for interactivity */
+.release-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image container */
+.release-image {
+    object-fit: fill;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Album / single artwork */
+.release-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Release text content */
+.release-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Release title */
+.release-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Artist name */
+.release-info .artist {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Release date */
+.release-info .date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Type (Album / Single) */
+.release-info .type {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+/* ================= Mobile Responsive ================= */
+@media (max-width: 600px) {
+  .release-card {
+    flex-direction: row;
+    padding: 0.8rem;
+  }
+
+  .release-image {
+    width: 65px;
+    height: 65px;
+  }
+
+  .discography h2 {
+    font-size: 1.8rem;
+  }
+
+  .release-group h3 {
+    font-size: 1.4rem;
+  }
+}
