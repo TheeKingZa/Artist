@@ -152,7 +152,13 @@ section {
   justify-content: center;
   align-items: center;
   gap: .5rem;
+}
 
+@media (max-width < 500px) {
+  .sec-contact {
+    background-color: red;
+  }
+  
 }
 /* socials contact */
 .socials-con {
