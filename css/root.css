@@ -5,17 +5,26 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* colors */
+  --clr-main: #f39c12;
+  --clr-gray: #aaa;
+  --clr1: black;
+  --clr2: white;
+
+}
+
 /* Base layout */
 body {
   font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
+  background: var(--clr1);
+  color: var(--clr2);
   line-height: 1.6;
 }
 
 /* Navigation */
 header {
-  background: #000;
+  background: var(--clr1);
   padding: 15px 25px;
 }
 
@@ -26,14 +35,14 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: var(--clr2);
   text-decoration: none;
   margin-left: 15px;
   font-size: 14px;
 }
 
 nav a:hover {
-  color: #f39c12;
+  color: var(--clr-main);
 }
 
 /* Section spacing */
@@ -43,7 +52,7 @@ section {
 
 /* Cards */
 .card {
-  background: #1e1e1e;
+  background: var(--clr1);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -95,6 +104,23 @@ section {
 .social-links a:hover {
   transform: scale(1.1);
 }
+/* image for bio */
+.card-img {
+  width: 10%;
+  height: 70%;
+
+
+}
+
+/* sec-contact */
+.sec-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+}
 
 
 
@@ -102,9 +128,9 @@ section {
 footer {
     position: sticky;
     bottom: 0;
-  background: #000;
+  background: var(--clr1);
   text-align: center;
   padding: 15px;
   font-size: 13px;
-  color: #aaa;
+  color: var(--clr-gray);
 }
