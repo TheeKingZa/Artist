@@ -16,6 +16,7 @@
 
 /* Base layout */
 body {
+  padding: 2px;
   font-family: Arial, sans-serif;
   background: var(--clr1);
   color: var(--clr2);
@@ -119,6 +120,20 @@ section {
   align-items: center;
   gap: .5rem;
 
+}
+/* socials contact */
+.socials-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--clr-gray);
+}
+/* Social links */
+.socials_links_con {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
 }
 
 
