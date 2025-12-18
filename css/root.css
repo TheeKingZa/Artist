@@ -19,7 +19,6 @@ body {
   font-family: Arial, sans-serif;
   background: var(--clr1);
   color: var(--clr2);
-  line-height: 1.6;
 }
 
 /* Navigation */
@@ -106,9 +105,9 @@ section {
 }
 /* image for bio */
 .card-img {
-  width: 10%;
-  height: 70%;
-
+  width: 50%;
+  height: 90%;
+  border-radius: 25%;
 
 }
 
