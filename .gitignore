@@ -37,6 +37,9 @@ build/
 # Backup files
 *.bak
 
+# psd files
+.psd
+
 # =============================
 # NOTE:
 # Do NOT ignore:
