@@ -90,6 +90,9 @@ section {
 
 /* Cards */
 .card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background: var(--clr2);
   color: var(--clr1);
   padding: 20px;
@@ -106,6 +109,7 @@ section {
     align-items: center;
 
     border-radius: 25px;
+
 
 }
 
