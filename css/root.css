@@ -12,6 +12,8 @@
   --clr1: black;
   --clr2: white;
 
+  --clr-red: rgb(195, 0, 0);
+
   /* font sizes */
   --fnt-sml: .5rem;
   --fnt-m: 1rem;
@@ -51,6 +53,14 @@ nav a:hover {
   color: var(--clr-main);
 }
 
+.nav-logo {
+  background-image: url('../assets/images/logos/Logo_r.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 150px;
+}
 
 /* hero */
 .hero {
@@ -102,10 +112,17 @@ section {
 
 /* Social links container */
 .social-links {
-  margin-top: 10px;
+  margin-top: 1rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 12px;
+}
+
+.social-links i {
+  justify-content: center;
+  align-items: center;
 }
 
 /* Social icon links */
@@ -120,8 +137,19 @@ section {
 .social-links a img {
   width: 100%;
   height: 100%;
+  align-items: center;
   object-fit: contain;
 }
+
+.audiomack_logo {
+  background-image: url('../assets/images/logos/socials/audiomack.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 60%;
+}
+
 
 /* Hover effect */
 .social-links a:hover {
@@ -147,26 +175,60 @@ section {
 }
 /* sec-contact */
 .sec-contact {
+ display: flex;
+ justify-content: center;
+
+}
+
+@media (width < 500px) {
+  .sec-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec-aboutus {
+
+  }
+
+  .sec-aboutus.h1 {
+    color: var(--clr-main);
+  }
+  
+  .socials-con {
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.sec-div-logo {
+  background-image: url('../assets/images/logos/Logo_r.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40%;
+  height: 200px;
+}
+
+.sec-aboutus {
+  width: 60%;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+
 }
 
-@media (max-width < 500px) {
-  .sec-contact {
-    background-color: red;
-  }
-  
-}
 /* socials contact */
 .socials-con {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--clr-gray);
+  background-color: var(--clr-red);
 }
 /* Social links */
 .socials_links_con {
@@ -176,28 +238,39 @@ section {
 }
 
 
-/* timeline */
-.content_years {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-}
-
-.content_years h1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  color: aqua;
-}
 
 /* Footer */
 footer {
-    position: sticky;
+
+  margin-top: 10vh;
+    position: fixed;
     bottom: 0;
-  background: var(--clr1);
-  text-align: center;
-  padding: 15px;
+  background: var(--clr2);
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   font-size: 13px;
-  color: var(--clr-gray);
+  width: 100%;
+  color: var(--clr1);
+  gap: 3rem;
+}
+
+/* Footers 
+ * 
+ * @adds on */
+.date-footer {
+  color: var(--clr1);
+}
+.designby {
+  background-image: url('../assets/images/logos/Logo_r.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 50px;
+  height: 50px;
+  /* background-color: red; */
+
 }
