@@ -83,6 +83,12 @@ section {
 }
 /* section */
 .artists-section {
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr1);
 }
 
@@ -93,11 +99,14 @@ section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background: var(--clr2);
   color: var(--clr1);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+
 }
 
 /* Artist layout */
