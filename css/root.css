@@ -109,8 +109,6 @@ section {
   background-color: var(--clr-gold);
   text-align: center;
   border-radius: 15%;
-  box-shadow: crimson ;
-
 }
 
 /* Artist layout */
@@ -243,7 +241,12 @@ section {
 /* sec-contact */
 .sec-contact {
  display: flex;
+ flex-direction: column;
  justify-content: center;
+ align-items: center;
+
+ font-size: var(--fnt-xl);
+
 
 }
 
