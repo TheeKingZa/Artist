@@ -7,12 +7,13 @@
 
 :root {
   /* colors */
-  --clr-main: #f39c12;
+  --clr-main:rgb(195, 0, 0);
   --clr-gray: #aaa;
   --clr1: black;
   --clr2: white;
 
-  --clr-red: rgb(195, 0, 0);
+  --clr-red: rgb(253, 50, 50);
+  --clr-gold: #f39c12;
 
   /* font sizes */
   --fnt-sml: .5rem;
@@ -28,6 +29,7 @@ body {
   font-family: Arial, sans-serif;
   background: var(--clr1);
   color: var(--clr2);
+  
 }
 
 /* Navigation */
@@ -51,6 +53,7 @@ nav a {
 
 nav a:hover {
   color: var(--clr-main);
+  transition: transform 0.2s ease;
 }
 
 .nav-logo {
@@ -78,10 +81,17 @@ nav a:hover {
 section {
   padding: 60px 20px;
 }
+/* section */
+.artists-section {
+  background-color: var(--clr1);
+}
+
+
 
 /* Cards */
 .card {
-  background: var(--clr1);
+  background: var(--clr2);
+  color: var(--clr1);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -99,6 +109,30 @@ section {
 
 }
 
+.genre {
+
+}
+.description {
+
+}
+
+/* Que */
+.que-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('../assets/images/Que.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 400px;
+
+  background-color: var(--clr2);
+  border-radius: 25%;
+
+}
 
 /* Grid layout */
 .grid {
@@ -127,9 +161,15 @@ section {
 
 /* Social icon links */
 .social-links a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
+  color: var(--clr-main);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  width: 100px;
+  height: 100px;
   transition: transform 0.2s ease;
 }
 
@@ -146,8 +186,8 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 60%;
+  width: 30%;
+  height: 30%;
 }
 
 
@@ -173,35 +213,18 @@ section {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: var(--fnt-xxl);
 }
+
+.media-font2 {
+  text-align: center;
+  color: var(--clr1);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: var(--fnt-xxl);
+}
 /* sec-contact */
 .sec-contact {
  display: flex;
  justify-content: center;
 
-}
-
-@media (width < 500px) {
-  .sec-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .sec-aboutus {
-
-  }
-
-  .sec-aboutus.h1 {
-    color: var(--clr-main);
-  }
-  
-  .socials-con {
-    gap: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
 }
 
 .sec-div-logo {
@@ -225,10 +248,23 @@ section {
 
 /* socials contact */
 .socials-con {
+  gap: 2rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: var(--clr-red);
+}
+
+.socials-con a {
+  color: var(--clr1);
+
+}
+
+.socials-con a:hover {
+  color: var(--clr2);
+  transition: transform 0.2s ease;
+
 }
 /* Social links */
 .socials_links_con {
@@ -273,4 +309,36 @@ footer {
   height: 50px;
   /* background-color: red; */
 
+}
+
+
+/* 
+ * Responsiveness
+ * 
+ */
+
+ /* Large screens */
+ 
+@media (width < 400px) {
+  .sec-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec-aboutus {
+
+  }
+
+  .sec-aboutus.h1 {
+    color: var(--clr-main);
+  }
+  
+  .socials-con {
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
