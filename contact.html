@@ -1,115 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =========================================================
+    Base Meta
+  ========================================================== -->
   <meta charset="UTF-8" />
-  <title>THEYMUSTBETHEMOBB | Contact</title>
-  
-    <!-- favicon -->
-  <link rel="shortcut icon" href="./assets/images/logos/Logo_r.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact THEYMUSTBETHEMOBB — bookings, enquiries, and management details." />
 
-  <!-- Css -->
+  <title>THEYMUSTBETHEMOBB | Contact</title>
+
+  <!-- =========================================================
+    Favicon
+  ========================================================== -->
+  <link rel="shortcut icon" href="./assets/images/logos/Logo_r.png" type="image/x-icon" />
+
+  <!-- =========================================================
+    Shared CSS
+  ========================================================== -->
   <link rel="stylesheet" href="./css/root.css" />
 
-  <!-- Font Awesome icons -->
+  <!-- =========================================================
+    Icons
+  ========================================================== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-
-
+  <!-- =========================================================
+    JS
+  ========================================================== -->
+  <script src="./js/date.js" defer></script>
 </head>
-<body>
 
-   <!-- ================= Navigation ================= -->
-  <header>
-    <nav>
-      <div class="nav-logo" alt="THEYMUSTBETHEMOBB"></div>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="media.html">Media</a>
-        <a href="contact.html">...</a>
+<body>
+  <!-- =========================================================
+    Skip Link (Accessibility)
+  ========================================================== -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =========================================================
+    Header / Navigation
+  ========================================================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="THEYMUSTBETHEMOBB Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">THEYMUSTBETHEMOBB</span>
+      </a>
+
+      <div class="nav-links" role="list">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="media.html">Gallery</a>
+        <a class="nav-link is-active" href="contact.html" aria-current="page">Contact</a>
       </div>
     </nav>
   </header>
 
+  <!-- =========================================================
+    Main Content
+  ========================================================== -->
+  <main id="main">
 
-  
-  <section class="sec-contact">
-    <!-- imgs_hans -->
-     <div class="sec-div-logo">
-     </div>
-     
-     
-     <div class="sec-aboutus"> 
-    <h1 class="media-font">About Us</h1>
-    <p>TseFlySkaMabana</p>
-    <span style="font-size: var(--fnt-m);">(ThoseFlyAsADove)</span>
-    <hr>
-    <br>
-    <br>
+    <!-- =======================================================
+      Contact / About
+    ======================================================== -->
+    <section class="section" aria-label="Bookings and enquiries">
+      <div class="container">
+        <header class="section-header">
+          <h1 class="section-title media-font">Contact</h1>
+          <p class="section-subtitle">Bookings, enquiries, and management.</p>
+        </header>
 
-
-    
-    <caption>Bookings & Enquiries</caption>
-    <p>Email: <br> <a href="mailto:itmustbethebookingsmail@gmail.com">itmustbethebookingsmail@gmail.com</a></p>
-    <p>Call: <a href="tel:+27717533471">071 753 3471</a></p>
-    <p>WhatsApp: <a href="tel:+27656577453">065 657 7453</a></p>
-    
-  </div>
-  
-</section>
-
-<section class="socials-con">
-  <h1>MANAGEMENT</h1>
-  <div>
-    <div class="que-img"></div>
-    <h2 class="media-font2">Thabang Que</h2>
-    <caption>Ke Hole Moo Retswang, Ke Hole Moo Reyang.</caption>
-    <hr>
-    <br>
-    <a style="color: blue; display: flex; justify-content: center;" href="mailto:thabangque.gmail.com">Mail me here</a>
-
-  </div>
-      <div>
-      <div>
-        <h1>Social Media:</h1>
-        <hr>
-        <br>
-      </div>
-      <div class="socials_links_con">
-        <!-- threads -->
-        <a href="https://www.threads.com/@thabang_que">
-          <i class="fab fa-threads">@</i>
-        </a>
-        
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/Thabang.Que">
-          <i class="fab fa-facebook"></i>
-            </a>
-            
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/thabang_que">
-              <i class="fab fa-instagram"></i>
-            </a>
-
+        <div class="contact-layout">
+          <!-- Brand panel -->
+          <div class="card contact-card">
+            <div class="contact-brand">
+              <div class="sec-div-logo" aria-hidden="true"></div>
+              <p class="contact-tagline">
+                <strong>TseFlySkaMabana</strong><br>
+                <span class="muted">(ThoseFlyAsADove)</span>
+              </p>
             </div>
-    </div>
-  </section>
-  
-  <br><br><br><br>
-  
+          </div>
 
- <!-- ================= Footer ================= -->
-  <footer>
-    <div class="date-footer">
-      THEYMUSTBETHEMOBB © <span id="year"></span>
-    </div>
-    <div class="designby">
+          <!-- Booking details -->
+          <div class="card contact-card">
+            <div class="contact-body">
+              <h2 class="card-title media-font">Bookings &amp; Enquiries</h2>
+
+              <div class="contact-items" role="list">
+                <p class="contact-item" role="listitem">
+                  <span class="contact-label">Email</span>
+                  <a class="contact-link" href="mailto:itmustbethebookingsmail@gmail.com">
+                    itmustbethebookingsmail@gmail.com
+                  </a>
+                </p>
+
+                <p class="contact-item" role="listitem">
+                  <span class="contact-label">Call</span>
+                  <a class="contact-link" href="tel:+27717533471">071 753 3471</a>
+                </p>
+
+                <p class="contact-item" role="listitem">
+                  <span class="contact-label">WhatsApp</span>
+                  <a class="contact-link" href="tel:+27656577453">065 657 7453</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================
+      Management
+    ======================================================== -->
+    <section class="section" aria-label="Management">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Management</h2>
+          <p class="section-subtitle">Primary contact for coordination and operations.</p>
+        </header>
+
+        <article class="card manager-card">
+          <div class="manager-media">
+            <div class="que-img" aria-hidden="true"></div>
+          </div>
+
+          <div class="manager-body">
+            <h3 class="manager-name">Thabang Que</h3>
+            <p class="manager-quote">Ke Hole Moo Retswang, Ke Hole Moo Reyang.</p>
+
+            <div class="manager-actions">
+              <a class="btn btn-primary" href="mailto:thabangque.gmail.com">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>Email Management</span>
+              </a>
+            </div>
+
+            <div class="manager-social">
+              <h4 class="manager-social-title">Social Media</h4>
+
+              <div class="social-links" aria-label="Thabang Que social links">
+                <a href="https://www.threads.com/@thabang_que" target="_blank" rel="noopener noreferrer" aria-label="Thabang Que on Threads">
+                  <i class="fab fa-threads" aria-hidden="true">@</i>
+                </a>
+                <a href="https://www.facebook.com/Thabang.Que" target="_blank" rel="noopener noreferrer" aria-label="Thabang Que on Facebook">
+                  <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/thabang_que" target="_blank" rel="noopener noreferrer" aria-label="Thabang Que on Instagram">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+    Footer
+  ========================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="date-footer">
+        THEYMUSTBETHEMOBB &copy; <span id="year"></span>
+      </p>
+      <p class="designby" aria-hidden="true"></p>
     </div>
   </footer>
-
-
-  <!-- ================= JavaScript ================= -->
-  <!-- Auto-updates the year -->
-  <script src="./js/date.js"></script>
-
 </body>
 </html>

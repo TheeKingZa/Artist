@@ -1,89 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =========================================================
+    Base Meta
+  ========================================================== -->
   <meta charset="UTF-8" />
-  <title>THEYMUSTBETHEMOBB | Gallery</title>
-    <!-- favicon -->
-  <link rel="shortcut icon" href="./assets/images/logos/Logo_r.png" type="image/x-icon">
-  <!-- Css -->
-  <link rel="stylesheet" href="./css/root.css" />
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="THEYMUSTBETHEMOBB Gallery — photos, visuals, and music projects." />
 
-   <!-- ================= Navigation ================= -->
-  <header>
-    <nav>
-      <div class="nav-logo" alt="THEYMUSTBETHEMOBB"></div>
-      <div>
-        <a href="index.html">Home</a> 
-        <a href="media.html">...</a>
-        <a href="contact.html">Contact</a>
+  <title>THEYMUSTBETHEMOBB | Media</title>
+
+  <!-- =========================================================
+    Favicon
+  ========================================================== -->
+  <link rel="shortcut icon" href="./assets/images/logos/Logo_r.png" type="image/x-icon" />
+
+  <!-- =========================================================
+    Shared CSS
+  ========================================================== -->
+  <link rel="stylesheet" href="./css/root.css" />
+
+  <!-- =========================================================
+    JS (defer loads after HTML parse)
+  ========================================================== -->
+  <script src="./js/date.js" defer></script>
+</head>
+
+<body>
+  <!-- =========================================================
+    Skip Link (Accessibility)
+  ========================================================== -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =========================================================
+    Header / Navigation
+  ========================================================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary navigation">
+      <!-- Brand -->
+      <a class="brand" href="index.html" aria-label="THEYMUSTBETHEMOBB Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">THEYMUSTBETHEMOBB</span>
+      </a>
+
+      <!-- Nav Links -->
+      <div class="nav-links" role="list">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link is-active" href="media.html" aria-current="page">Gallery</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
-  <h1 class="media-font">Gallery</h1>
-  <section class="grid">
-    <!-- Images/Gallary -->
-     <img src="./assets/images/swaeWrld.jpg" alt="Mooretswang" width="400px" height="400px">
-     <img src="./assets/images/TMBTM3.jpg" alt="Mooretswang" width="400px" height="400px">
-     <img src="./assets/images/TMBTM2.jpg" alt="Mooretswang" width="400px" height="400px">
-     <img src="./assets/images/TMBTM.jpg" alt="Mooretswang" width="400px" height="400px">
-     <img src="./assets/images/mabana.jpg" alt="Mooretswang" width="400px" height="400px">
-     <img src="./assets/images/mabanaUs.jpg" alt="Mooretswang" width="400px" height="400px">
+  <!-- =========================================================
+    Main Content
+  ========================================================== -->
+  <main id="main">
 
+    <!-- =======================================================
+      Gallery Section
+    ======================================================== -->
+    <section class="section" aria-label="Gallery">
+      <div class="container">
+        <header class="section-header">
+          <h1 class="section-title media-font">Gallery</h1>
+          <p class="section-subtitle">Photos and moments from the journey.</p>
+        </header>
+
+        <!-- Responsive gallery grid (CSS class added below) -->
+        <div class="grid gallery-grid">
+          <img src="./assets/images/swaeWrld.jpg" alt="HEMUSTBESWAE artwork / photo" loading="lazy">
+          <img src="./assets/images/TMBTM3.jpg" alt="THEYMUSTBETHEMOBB photo 3" loading="lazy">
+          <img src="./assets/images/TMBTM2.jpg" alt="THEYMUSTBETHEMOBB photo 2" loading="lazy">
+          <img src="./assets/images/TMBTM.jpg" alt="THEYMUSTBETHEMOBB photo 1" loading="lazy">
+          <img src="./assets/images/mabana.jpg" alt="Mabana cover / artwork" loading="lazy">
+          <img src="./assets/images/mabanaUs.jpg" alt="Mabana behind the scenes photo" loading="lazy">
+        </div>
+      </div>
     </section>
 
+    <!-- =======================================================
+      Music Projects Section
+    ======================================================== -->
+    <section class="section" aria-label="Music Projects">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title media-font">Music Projects</h2>
+          <p class="section-subtitle">Watch selected releases and visuals.</p>
+        </header>
 
+        <!-- Video grid: each iframe is wrapped for responsiveness -->
+        <div class="grid video-grid">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/2coFu0JFfjo?si=unyDPNelVO3cvhut"
+              title="M00 Re Tswang — YouTube video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
 
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/KHxxvyRJctQ?si=ICNjHIcu-RSY0o2x"
+              title="Ready4Drama — YouTube video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
 
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/thZHbO7Xfk8?si=BK4PyCd6nuEra5xD"
+              title="Ten Toes — YouTube video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
 
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/CrQx5qGwKQs?si=rsbyU6K5lCqvTgPt"
+              title="Black Maipatile — YouTube video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
 
-    <!-- Music Projects -->
-    <h1 class="media-font">Music Projects</h1>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/MfYatyzcOAo?si=234hxc9S4ofbMMz4"
+              title="Dik0l0pata — YouTube video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- YouTube embeds -->
-    <div class="grid">
+    <!-- =======================================================
+      Full-width Banner Image
+    ======================================================== -->
+    <section class="section" aria-label="Location banner">
+      <img
+        class="banner-img"
+        src="./assets/images/SBK.jpg"
+        alt="Sebokeng tag banner"
+        loading="lazy"
+      />
+    </section>
 
+  </main>
 
-        <!-- M00 Re Tswang -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/2coFu0JFfjo?si=unyDPNelVO3cvhut" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-        
-        
-        
-        <!-- Ready4Drama -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/KHxxvyRJctQ?si=ICNjHIcu-RSY0o2x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-        <!-- Ten toes -->
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/thZHbO7Xfk8?si=BK4PyCd6nuEra5xD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-        <!-- Black Maipatile -->
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/CrQx5qGwKQs?si=rsbyU6K5lCqvTgPt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
- 
-         <!-- Dik0l0pata -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/MfYatyzcOAo?si=234hxc9S4ofbMMz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-
-
-  </section>
-
-  <img class="" src="./assets/images/SBK.jpg" alt="Sebokeng_tag" width="100%" height="500px">
-
- <!-- ================= Footer ================= -->
-  <footer>
-    <div class="date-footer">
-      THEYMUSTBETHEMOBB © <span id="year"></span>
-    </div>
-    <div class="designby">
+  <!-- =========================================================
+    Footer
+  ========================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="date-footer">
+        THEYMUSTBETHEMOBB &copy; <span id="year"></span>
+      </p>
+      <p class="designby" aria-hidden="true"></p>
     </div>
   </footer>
-
-  <!-- ================= JavaScript ================= -->
-  <!-- Auto-updates the year -->
-  <script src="./js/date.js"></script>
-
 </body>
 </html>

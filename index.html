@@ -1,289 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =========================================================
+    Base Meta
+  ========================================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="THEYMUSTBETHEMOBB — music collective. Artists, releases, and media." />
+
   <title>THEYMUSTBETHEMOBB | Home</title>
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="./assets/images/logos/Logo_r.png" type="image/x-icon">
-  <!-- Shared CSS -->
+  <!-- =========================================================
+    Favicon
+  ========================================================== -->
+  <link rel="shortcut icon" href="./assets/images/logos/Logo_r.png" type="image/x-icon" />
+
+  <!-- =========================================================
+    CSS (Theme: Red / Black / White handled in CSS)
+  ========================================================== -->
   <link rel="stylesheet" href="./css/root.css" />
-  <link rel="stylesheet" href="./css/decographySection.css">
+  <link rel="stylesheet" href="./css/decographySection.css" />
 
-  <!-- Font Awesome icons -->
+  <!-- =========================================================
+    Icons
+  ========================================================== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
 
-  <!-- ================= Navigation ================= -->
-  <header>
-    <nav>
-      <div class="nav-logo" alt="THEYMUSTBETHEMOBB"></div>
-      <div>
-        <a href="index.html">...</a>
-        <a href="media.html">Media</a>
-        <a href="contact.html">Contact</a>
+  <!-- =========================================================
+    JS (defer = loads after HTML parsing)
+  ========================================================== -->
+  <script src="./js/date.js" defer></script>
+  <!-- Optional: create ./js/main.js if you want mobile nav toggle -->
+  <!-- <script src="./js/main.js" defer></script> -->
+</head>
+
+<body>
+  <!-- =========================================================
+    Skip Link (Accessibility)
+  ========================================================== -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =========================================================
+    Header / Navigation
+  ========================================================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary navigation">
+      <!-- Brand -->
+      <a class="brand" href="index.html" aria-label="THEYMUSTBETHEMOBB Home">
+        <!-- If your logo is set via CSS background-image, keep this empty.
+             Otherwise swap to: <img src="..." alt="THEYMUSTBETHEMOBB logo"> -->
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">THEYMUSTBETHEMOBB</span>
+      </a>
+
+      <!-- Nav Links -->
+      <div class="nav-links" role="list">
+        <a class="nav-link is-active" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="media.html">Media</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </div>
+
+      <!-- Optional: Mobile menu button (wire up in JS + CSS if needed) -->
+      <!--
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+      -->
     </nav>
   </header>
 
-  <!-- ================= Hero Section ================= -->
-  <section class="hero">
-    <h1>THEYMUSTBETHEMOBB</h1>
+  <!-- =========================================================
+    Main Content
+  ========================================================== -->
+  <main id="main">
 
-    <!-- YouTube -->
-    <p>Ke Hole Moo Re Tswang, Ke Hole Moo Reyang</p>
-    <a href="https://youtube.com/@theymustbethemob"><i class="fab fa-youtube">View Channel</i></a>
-  </section>
+    <!-- =======================================================
+      Hero Section
+    ======================================================== -->
+    <section class="hero" aria-label="Intro">
+      <div class="container hero-inner">
+        <!-- One clear H1 per page -->
+        <h1 class="hero-title">TSEFLYSKAMABANA</h1>
 
-  
+        <p class="hero-tagline">Ke Hole Moo Re Tswang, Ke Hole Moo Reyang</p>
 
-  <!-- ================= Artists Section ================= -->
-  <section class="artists-section">
-    <h1 class="media-font">Our Artists</h1>
-    <hr width="100%" height="300px">
-  <br><br>
-  <br><br>
-
-    <div class="artists">
-
-      <!-- ========== Artist Card : HEMUSTBEFRWSH ========== -->
-      <div class="card">
-
-        <!-- Artist Image Placeholder -->
-        <!-- Replace src with real artist image -->
-        <div class="artist-image">
-          <img class="card-img"
-            src="./assets/images/frwsh.png" 
-            alt="HeMustBeFrwsh artist image"
-          />
-        </div>
-
-        <h1 class="media-font">HEMUSTBEFRWSH</h1>
-        <p class="genre">Hip Hop / Trap</p>
-
-        <!-- Short artist identity -->
-        <p class="description">
-          HeMustBeFrwsh is a creative brand built around originality, raw sound,
-          and culture-driven expression.
-        </p>
-
-        <!-- Social links -->
-        <div class="social-links">
-
-          <!-- YouTube -->
-          <a href="https://www.youtube.com/channel/UCA0cSfgwJyz4RAgQ95qsZdA">
-            <i class="fab fa-youtube"></i>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://youtube.com/@theymustbethemob" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+            <span>View YouTube Channel</span>
           </a>
 
-          <!-- TikTok -->
-          <a href="https://www.tiktok.com/@hemustbefrwsh">
-            <i class="fab fa-tiktok"></i>
+          <a class="btn btn-ghost" href="#releases">
+            <span>Explore Releases</span>
           </a>
-
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/freshgodtoo/">
-            <i class="fab fa-facebook"></i>
-          </a>
-
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/hemustbefrwsh">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <!-- Audiomack -->
-          <a href="https://audiomack.com/hemustbefrwsh-1">
-            <div class="audiomack_logo"></div>
-          </a>
-
         </div>
       </div>
+    </section>
 
-      <!-- ========== Artist Card : HEMUSTBESWAE ========== -->
-      <div class="card">
+    <!-- =======================================================
+      Artists Section
+    ======================================================== -->
+    <section class="section artists-section" aria-label="Our Artists">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title media-font">Our Artists</h2>
+          <p class="section-subtitle">Meet the voices behind the movement.</p>
+        </header>
 
-        <!-- Artist Image Placeholder -->
-        <!-- Replace src with real artist image -->
-        <div class="artist-image">
-          <img class="card-img"
-            src="./assets/images/swae.png" 
-            alt="HeMustBeSwae artist image"
-          />
+        <div class="grid artists" role="list">
+          <!-- ========== Artist Card : HEMUSTBEFRWSH ========== -->
+          <article class="card artist-card" role="listitem">
+            <div class="artist-image">
+              <img
+                class="card-img"
+                src="./assets/images/frwsh.png"
+                alt="HEMUSTBEFRWSH portrait"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title media-font">HEMUSTBEFRWSH</h3>
+              <p class="genre">Hip Hop / Trap</p>
+
+              <p class="description">
+                HeMustBeFrwsh is a creative brand built around originality, raw sound,
+                and culture-driven expression.
+              </p>
+
+              <div class="social-links" aria-label="HEMUSTBEFRWSH social links">
+                <a href="https://www.youtube.com/channel/UCA0cSfgwJyz4RAgQ95qsZdA" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on YouTube">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.tiktok.com/@hemustbefrwsh" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on TikTok">
+                  <i class="fab fa-tiktok" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/freshgodtoo/" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on Facebook">
+                  <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/hemustbefrwsh" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on Instagram">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://audiomack.com/hemustbefrwsh-1" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on Audiomack">
+                  <span class="audiomack_logo" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== Artist Card : HEMUSTBESWAE ========== -->
+          <article class="card artist-card" role="listitem">
+            <div class="artist-image">
+              <img
+                class="card-img"
+                src="./assets/images/swae.png"
+                alt="HEMUSTBESWAE portrait"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title media-font">HEMUSTBESWAE</h3>
+              <p class="genre">Hip Hop / Trap</p>
+
+              <p class="description">
+                HeMustBeSwae represents style, confidence, and smooth delivery —
+                a creative identity rooted in presence and self-expression.
+              </p>
+
+              <div class="social-links" aria-label="HEMUSTBESWAE social links">
+                <a href="https://www.youtube.com/@hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on YouTube">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.tiktok.com/@hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on TikTok">
+                  <i class="fab fa-tiktok" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/andile.ramaidi" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on Facebook">
+                  <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on Instagram">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://audiomack.com/hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on Audiomack">
+                  <span class="audiomack_logo" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      Discography / Releases
+    ======================================================== -->
+    <section id="releases" class="section discography" aria-label="Music Releases">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title media-font">Music Releases</h2>
+          <p class="section-subtitle">Albums and singles from the collective.</p>
+        </header>
+
+        <!-- ===== Album Group ===== -->
+        <div class="release-group" aria-label="Albums">
+          <h3 class="group-title">Album</h3>
+
+          <article class="release-card">
+            <div class="release-image">
+              <img
+                src="./assets/images/releases/m00-re-tswang.jpg"
+                alt="M00 Re Tswang album cover"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="release-info">
+              <h4 class="release-title">M00 Re Tswang</h4>
+              <p class="artist">HEMUSTBEFRWSH &amp; HEMUSTBESWAE</p>
+              <p class="date">Released: 20 June 2025</p>
+              <p class="type">Album • 12 Tracks</p>
+            </div>
+          </article>
         </div>
 
-        <h1 class="media-font">HEMUSTBESWAE</h1>
-        <p class="genre">Hip Hop / Trap</p>
+        <!-- ===== Singles Group ===== -->
+        <div class="release-group" aria-label="Singles">
+          <h3 class="group-title">Singles</h3>
 
-        <!-- Short artist identity -->
-        <p class="description">
-          HeMustBeSwae represents style, confidence, and smooth delivery —
-          a creative identity rooted in presence and self-expression.
-        </p>
+          <article class="release-card">
+            <div class="release-image">
+              <img
+                src="./assets/images/releases/mabana.jpeg"
+                alt="Mabana single cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="release-info">
+              <h4 class="release-title">Mabana</h4>
+              <p class="artist">HEMUSTBEFRWSH &amp; HEMUSTBESWAE</p>
+              <p class="date">Released: 15 June 2025</p>
+              <p class="type">Single</p>
+            </div>
+          </article>
 
-        <!-- Social links -->
-        <div class="social-links">
+          <article class="release-card">
+            <div class="release-image">
+              <img
+                src="./assets/images/releases/tentoes.jpeg"
+                alt="Ten Toes single cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="release-info">
+              <h4 class="release-title">Ten Toes</h4>
+              <p class="artist">HEMUSTBEFRWSH &amp; HEMUSTBESWAE</p>
+              <p class="date">Released: 2025</p>
+              <p class="type">Single</p>
+            </div>
+          </article>
 
-          <!-- YouTube -->
-          <a href="https://www.youtube.com/@hemustbeswae">
-            <i class="fab fa-youtube"></i>
-          </a>
-
-          <!-- TikTok -->
-          <a href="https://www.tiktok.com/@hemustbeswae">
-            <i class="fab fa-tiktok"></i>
-          </a>
-
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/andile.ramaidi">
-            <i class="fab fa-facebook"></i>
-          </a>
-
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/hemustbeswae">
-          <i class="fab fa-instagram"></i>
-          </a>
-
-
-          <!-- Audiomack -->
-          <a href="https://audiomack.com/hemustbeswae">
-            <div class="audiomack_logo"></div>
-          </a>
-
+          <article class="release-card">
+            <div class="release-image">
+              <img
+                src="./assets/images/releases/Ready4Drama.jpeg"
+                alt="Ready4Drama single cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="release-info">
+              <h4 class="release-title">Ready4Drama</h4>
+              <p class="artist">HEMUSTBEFRWSH</p>
+              <p class="date">Released: 3 December 2025</p>
+              <p class="type">Single</p>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- =======================================================
+      Featured Video
+    ======================================================== -->
+    <section class="section featured-video" aria-label="Featured Video">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">View Our Work</h2>
+          <p class="section-subtitle">A quick look at the sound and visuals.</p>
+        </header>
 
-  <!-- ================= Discography Section ================= -->
-<section class="discography">
-  <h1 class="media-font">Music Releases</h1>
-  <hr width="100%" height="300px">
-  <br><br>
-  <br><br>
-
-  <!-- ===== Album ===== -->
-  <div class="release-group">
-
-    <h3>Album</h3>
-
-    <div class="release-card">
-
-      <!-- Album cover image -->
-      <!-- Replace with actual album artwork -->
-      <div class="release-image">
-        <img 
-          src="./assets/images/releases/m00-re-tswang.jpg"
-          src="./assets/images/m00retswang.jpg" 
-          alt="M00 Re Tswang Album Cover"
-        />
+        <!-- Responsive video wrapper (style in CSS) -->
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/PobQM_nfSYw?si=4gFYyOtYgmt0DGBM"
+            title="THEYMUSTBETHEMOBB - Featured Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
+    </section>
 
-      <!-- Album info -->
-      <div class="release-info">
-        <h4>M00 Re Tswang</h4>
-        <p class="artist">HEMUSTBEFRWSH & HEMUSTBESWAE</p>
-        <p class="date">Released: 20 June 2025</p>
-        <p class="type">Album • 12 Tracks</p>
-      </div>
+  </main>
 
-    </div>
-  </div>
+  <!-- =========================================================
+    Footer
+  ========================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="date-footer">
+        THEYMUSTBETHEMOBB &copy; <span id="year"></span>
+      </p>
 
-  <!-- ===== Singles ===== -->
-  <div class="release-group">
-
-    <h3>Singles</h3>
-
-    <!-- Single 2 -->
-    <div class="release-card">
-
-      <!-- Single artwork -->
-      <div class="release-image">
-        <img 
-          src="./assets/images/releases/mabana.jpeg" 
-          alt="Mabana Single Cover"
-        />
-      </div>
-
-      <!-- Single info -->
-      <div class="release-info">
-        <h4>Mabana</h4>
-        <p class="artist">HEMUSTBEFRWSH & HEMUSTBESWAE</p>
-        <p class="date">Released: 15 June 2025</p>
-        <p class="type">Single</p>
-      </div>
-
-    </div>
-
-    <!-- Single 3 -->
-    <div class="release-card">
-
-      <div class="release-image">
-        <img 
-          src="./assets/images/releases/tentoes.jpeg" 
-          alt="Ten Toes Single Cover"
-        />
-      </div>
-
-      <div class="release-info">
-        <h4>Ten Toes</h4>
-        <p class="artist">HEMUSTBEFRWSH & HEMUSTBESWAE</p>
-        <p class="date">Released: 2025</p>
-        <p class="type">Single</p>
-      </div>
-
-    </div>
-
-    <!-- Single 4 -->
-    <div class="release-card">
-
-      <div class="release-image">
-        <img 
-          src="./assets/images/releases/Ready4Drama.jpeg" 
-          alt="Ready4Drama Single Cover"
-        />
-      </div>
-
-      <div class="release-info">
-        <h4>Ready4Drama</h4>
-        <p class="artist">HEMUSTBEFRWSH</p>
-        <p class="date">Released: 3 December 2025</p>
-        <p class="type">Single</p>
-      </div>
-
-    </div>
-
-
-
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- More about the music -->
-   <h1 style="text-align: center; padding: 40px;">View Our Work</h1>
-   <iframe width="100%" height="315" src="https://www.youtube.com/embed/PobQM_nfSYw?si=4gFYyOtYgmt0DGBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-   <br><br><br>
-   <br><br><br><br><br><br>
-
-
-  <!-- ================= Footer ================= -->
-  <footer>
-    <div class="date-footer">
-      THEYMUSTBETHEMOBB © <span id="year"></span>
-    </div>
-    <div class="designby">
+      <!-- Optional: add a clean credit line if needed -->
+      <p class="designby">
+        <!-- Designed by ... -->
+      </p>
     </div>
   </footer>
-
-  <!-- ================= JavaScript ================= -->
-  <!-- Auto-updates the year -->
-  <script src="./js/date.js"></script>
 
 </body>
 </html>

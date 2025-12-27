@@ -1,128 +1,136 @@
-/* =====================================================
-   Discography Section Styles
-   File: discographySection.css
-   ===================================================== */
+/* ============================================================
+  Discography Section Styles
+  File: discographySection.css
 
-/* Main discography wrapper */
+  Goal:
+  - Match the professional Red / Black / White theme
+  - Avoid fighting with root.css (scope everything under .discography)
+  - Fix responsiveness (your previous mobile rules used flex on a grid element)
+
+  Tip:
+  If you prefer, you can REMOVE this file entirely and keep discography styles
+  inside root.css only. If you keep it, use this refactor.
+============================================================ */
+
+/* =========================
+  Discography wrapper
+========================= */
 .discography {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  padding: 4rem 1.5rem;
   width: 100%;
-  margin: 0 auto;
 }
 
-/* Section title */
-.discography h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 3rem;
-  letter-spacing: 1px;
+.discography .section-header {
+  margin-bottom: 24px;
 }
 
 /* Group wrapper (Albums / Singles) */
-.release-group {
-  margin-bottom: 3rem;
+.discography .release-group {
+  margin-top: 18px;
+  padding-top: 18px;
 }
 
-/* Group titles */
-.release-group h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
+/* Group title */
+.discography .group-title,
+.discography .release-group h3 {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.88);
 }
 
-/* Individual release card */
-.release-card {
+/* =========================
+  Release card layout
+========================= */
+.discography .release-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
 
-  /* Card look */
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 14px;
+  border-radius: var(--radius, 16px);
+
+  /* Theme card look */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition: transform 180ms cubic-bezier(.2, .8, .2, 1),
+              border-color 180ms cubic-bezier(.2, .8, .2, 1),
+              background 180ms cubic-bezier(.2, .8, .2, 1);
 }
 
-/* Hover effect for interactivity */
-.release-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+/* Spacing between multiple cards in the same group */
+.discography .release-card + .release-card {
+  margin-top: 12px;
 }
 
-/* Image container */
-.release-image {
-    object-fit: fill;
-  width: 300px;
-  height: 300px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  overflow: hidden;
+/* Hover = subtle lift + red accent */
+.discography .release-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(209, 0, 0, 0.35);
+  background: rgba(209, 0, 0, 0.08);
 }
 
-/* Album / single artwork */
-.release-image img {
+/* =========================
+  Cover art
+========================= */
+.discography .release-image {
   width: 100%;
-  height: 100%;
+}
+
+.discography .release-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-/* Release text content */
-.release-info {
-  display: flex;
-  flex-direction: column;
+/* =========================
+  Text styles
+========================= */
+.discography .release-info {
+  display: grid;
+  gap: 4px;
 }
 
-/* Release title */
-.release-info h4 {
+.discography .release-title,
+.discography .release-info h4 {
   font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-/* Artist name */
-.release-info .artist {
+.discography .release-info .artist {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.discography .release-info .date,
+.discography .release-info .type {
   font-size: 0.9rem;
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.65);
 }
 
-/* Release date */
-.release-info .date {
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-/* Type (Album / Single) */
-.release-info .type {
-  font-size: 0.8rem;
-  margin-top: 0.3rem;
-  opacity: 0.6;
+/* Make "Album • 12 Tracks" etc feel consistent */
+.discography .release-info .type {
   text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 0.8rem;
 }
 
-/* ================= Mobile Responsive ================= */
-@media (max-width: 600px) {
-  .release-card {
-    flex-direction: row;
-    padding: 0.8rem;
+/* =========================
+  Mobile Responsive
+========================= */
+@media (max-width: 560px) {
+  .discography .release-card {
+    grid-template-columns: 1fr;
   }
 
-  .release-image {
-    width: 65px;
-    height: 65px;
-  }
-
-  .discography h2 {
-    font-size: 1.8rem;
-  }
-
-  .release-group h3 {
-    font-size: 1.4rem;
+  .discography .release-image img {
+    max-width: 240px; /* keeps covers from becoming too huge */
   }
 }
