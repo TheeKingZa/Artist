@@ -77,6 +77,10 @@ a {
   --t-med: 240ms;
 }
 
+.links_to {
+  text-decoration: none;
+}
+
 /* =========================
   3) Base Page
 ========================= */
