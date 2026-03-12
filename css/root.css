@@ -539,6 +539,85 @@ body {
   }
 }
 
+/* =======================================================
+   WHAT WE DO SECTION STYLES
+========================================================== */
+
+/* Section spacing and background */
+.what-we-do {
+  padding: 4rem 2rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.what-we-do .section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.what-we-do .section-title {
+  font-size: 2.5rem;
+  color: var(--primary-color, #e60014);
+  margin-bottom: 1rem;
+}
+
+.what-we-do .section-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Content styling */
+.what-we-do .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
+/* Custom bullet list with strong labels */
+.what-we-do .mission-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.what-we-do .mission-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Custom red dot bullets */
+.what-we-do .mission-list li::before {
+  content: "•";
+  color: var(--primary-color, #e60014);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Strong text in-line styling */
+.what-we-do .mission-list strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Fade-in animation (ensure it's defined) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* =========================
   9) Featured Video (Responsive iframe)
 ========================= */
