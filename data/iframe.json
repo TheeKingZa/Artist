@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Episode 1: Introduction",
+        "description": "Are You Ready To Go Deeper?",
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/DMxZ-RkCTno?si=e1xx9ECoko9Bc20c\" title=\"GoDeeper_Podcast\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+        "title": "Episode 2: Second Episode",
+        "description": "The Gray Area Of Cheating",
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/taJwRIuUv_E?si=StHPxM4XP5JHSBiF\" title=\"GoDeeper_Podcast\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },{
+        "title": "The Build Up!!",
+        "description": "Surprise Guest",
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FRuhBDn5GsE?si=izkoXBghTD7hfq8H\" title=\"GoDeeper_Podcast\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },{
+        "title": "Episode 3:The Art of Expression",
+        "description": "Guest: K.Surpreme",
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/vms4dF-Xtgo?si=lvZLPQCXsjlwXFrE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    }
+]
+
+

@@ -1,497 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================================================
-    Base Meta
-  ========================================================== -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="THEYMUSTBETHEMOBB — music collective. Artists, releases, and media." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>THEYMUSTBETHEMOBB | Home</title>
+<title>SKYF LE MPAHLA</title>
 
-  <!-- =========================================================
-    Favicon
-  ========================================================== -->
-  <link rel="shortcut icon" href="./assets/images/logos/Logo_r.png" type="image/x-icon" />
+<!-- CSS -->
+<link rel="stylesheet" href="./static/css/root.css">
 
-  <!-- =========================================================
-    CSS (Theme: Red / Black / White handled in CSS)
-  ========================================================== -->
-  <link rel="stylesheet" href="./css/root.css" />
-  <link rel="stylesheet" href="./css/decographySection.css" />
-
-  <!-- =========================================================
-    Icons
-  ========================================================== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <!-- =========================================================
-    JS (defer = loads after HTML parsing)
-  ========================================================== -->
-  <script src="./js/date.js" defer></script>
-  <!-- Optional: create ./js/main.js if you want mobile nav toggle -->
-  <script src="./js/main.js" defer></script>
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- =========================================================
-    Skip Link (Accessibility)
-  ========================================================== -->
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- =========================================================
-    Header / Navigation
-  ========================================================== -->
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Primary navigation">
-      <!-- Brand -->
-      <a class="brand" href="https://theekingza.github.io/Portfolio" aria-label="THEYMUSTBETHEMOBB Home">
-        <!-- If your logo is set via CSS background-image, keep this empty.
-             Otherwise swap to: <img src="..." alt="THEYMUSTBETHEMOBB logo"> -->
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">THEYMUSTBETHEMOBB</span>
-      </a>
+<!-- ===== NAVBAR ===== -->
+<header class="header">
+    <nav class="nav container">
 
-      <!-- Nav Links -->
-      <div class="nav-links" role="list">
-        <a class="nav-link is-active" href="index.html" aria-current="page">Home</a>
-        <a class="nav-link" href="media.html">Media</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-      </div>
+        <!-- Logo -->
+        <h1 class="logo">SKYF</h1>
 
-      <!-- Optional: Mobile menu button (wire up in JS + CSS if needed) -->
-      <!--
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-      </button>
-      -->
+        <!-- Links -->
+        <div class="nav-links" id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#shop">Shop</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </nav>
-  </header>
-
-  <!-- =========================================================
-    Main Content
-  ========================================================== -->
-  <main id="main">
-
-    <!-- =======================================================
-      Hero Section
-    ======================================================== -->
-    <section class="hero" aria-label="Intro">
-      <div class="container hero-inner">
-        <!-- One clear H1 per page -->
-        <h1 class="hero-title">TSEFLYSKAMABANA</h1>
-
-        <p class="hero-tagline">Ke Hole Moo Re Tswang, Ke Hole Moo Reyang</p>
+</header>
 
 
-        <div class="hero-actions">
+<!-- ===== HERO ===== -->
+<section class="hero container" id="home">
 
-          <br><br>
-  <a href="#releases" class="btn btn-primary">Listen Now</a>
-  <a href="./contact.html#contact" class="btn btn-ghost">Partner With Us</a>
-</div>
+    <div class="hero-text">
+        <h2>SKYF LE MPAHLA</h2>
+        <p>Built from culture. Designed for identity.</p>
 
-      
-      </div>
-    </section>
-
-
-    <!-- =======================================================
-     WHAT WE DO
-  ======================================================== -->
-<section class="section what-we-do" aria-label="What We Do">
-  <div class="container">
-    <header class="section-header">
-      <h2 class="section-title media-font">What We Do</h2>
-      <p class="section-subtitle">TMBTM integrates artistic innovation with community engagement to create a lasting impact.</p>
-    </header>
-
-    <div class="about-content fade-in">
-      <ul class="mission-list">
-        <li>
-          <strong>Innovative Entertainment:</strong>
-          We produce music that is rooted in the vibrant experiences of Vaal. Our tracks merge traditional influences with modern Hip Hop beats to create an authentic sound that reflects the spirit of our community.
-        </li>
-        <li>
-          <strong>Live Performances & Local Events:</strong>
-          Our artists deliver electrifying live shows and community events that not only entertain but also celebrate Vaal’s rich cultural heritage. These events serve as a platform for local storytelling and communal engagement.
-        </li>
-        <li>
-          <strong>Digital Content & Social Outreach:</strong>
-          Through engaging digital content including music videos, behind-the-scenes footage, and interactive social media campaigns, we connect with local audiences, keeping the spirit of Vaal alive and resonating far beyond our immediate surroundings.
-        </li>
-        <li>
-          <strong>Strategic Brand Collaborations:</strong>
-          We partner with brands that are committed to making a difference in Vaal. By aligning with our authentic storytelling and local influence, these partnerships help drive initiatives that benefit the community, while also expanding our collective's reach.
-        </li>
-        <li>
-          <strong>Community Initiatives:</strong>
-          Beyond music, TMBT is actively involved in community outreach programs that support local talent, educational initiatives, and cultural events, ensuring that our influence extends to every corner of Vaal.
-        </li>
-      </ul>
+        <a href="#shop" class="btn">SHOP NOW</a>
     </div>
-  </div>
+
+    <div class="hero-img">
+        <img src="./graphics/images/Logo/SKYF LE MPAHLA.jpeg" alt="brand">
+    </div>
+
 </section>
 
 
-     <!-- =======================================================
-      MISSION AND VISION
-    ======================================================== -->
-    
-    <section class="section mission" aria-label="Mission and Vision">
-  <div class="container">
-    <header class="section-header">
-      <h2 class="section-title media-font">Our Mission & Vision</h2>
-    </header>
+<!-- ===== ABOUT ===== -->
+<section class="about container" id="about">
+    <h2 class="section-title">ABOUT</h2>
 
-    <div class="about-content fade-in">
-      <p>
-        Our mission is to elevate the Vaal community through music and to 
-        create transformative partnerships that drive cultural and social progress.
-      </p>
-
-      <ul class="mission-list">
-        <li><strong>Empower the Vaal Community</strong> — Amplifying local voices and identity.</li>
-        <li><strong>Catalyze Cultural Change</strong> — Inspiring dialogue and positive progress.</li>
-        <li><strong>Forge Strategic Collaborations</strong> — Partnering with brands that value authenticity.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-    
-
-    
-     <!-- =======================================================
-      ABOUT THEYYMUSTBETHEMOBB
-    ======================================================== -->
-    <section class="section about" aria-label="About THEYMUSTBETHEMOBB">
-  <div class="container">
-    <header class="section-header">
-      <h2 class="section-title media-font">About TMBTM</h2>
-    </header>
-
-    <div class="about-content fade-in">
-      <p>
-        THEYMUSTBETHEMOBB (TMBT) is a vibrant music collective born in the heart 
-        of Vaal. Built on authenticity and cultural pride, the movement exists 
-        to amplify local voices and transform music into a force for unity, 
-        empowerment, and social change.
-      </p>
-
-      <p>
-        More than entertainers, we are community ambassadors. Through music, 
-        live events, and strategic collaborations, TMBT drives cultural energy 
-        while creating opportunities for emerging talent and forward-thinking brands.
-      </p>
-    </div>
-  </div>
+    <p>
+        SKYF LE MPAHLA is a streetwear brand focused on identity, confidence, and culture.
+        Every piece represents originality and the courage to stand out.
+    </p>
 </section>
 
 
-     <!-- =======================================================
-      Analytics Overview
-    ======================================================== -->
-<div class="stat-card fade-in">
-  <h3 class="stat-number" data-target="9500">0</h3>
-  <p>Verified Instagram Listeners</p>
-</div>
+<!-- ===== SHOP ===== -->
+<section class="shop container" id="shop">
 
-<div class="stat-card">
-  <h3 class="stat-number" data-target="112000">0</h3>
-  <p>Streams on Single Release</p>
-</div>
+    <h2 class="section-title">COLLECTION</h2>
 
-<div class="stat-card">
-  <h3 class="stat-number" data-target="277949">0</h3>
-  <p>YouTube Views</p>
-</div>
+    <div class="products">
 
-<div class="stat-card">
-  <h3 class="stat-number" data-target="5000">0</h3>
-  <p>Organic Video Views</p>
-</div>
-
-
-    <!-- =======================================================
-      Artists Section
-    ======================================================== -->
-    <section class="section artists-section" aria-label="Our Artists">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title media-font">Our Artists</h2>
-          <p class="section-subtitle">Meet the voices behind the movement.</p>
-        </header>
-
-        <div class="grid artists" role="list">
-          <!-- ========== Artist Card : HEMUSTBEFRWSH ========== -->
-          <article class="card artist-card" role="listitem">
-            <div class="artist-image">
-              <img
-                class="card-img"
-                src="./assets/images/frwsh.png"
-                alt="HEMUSTBEFRWSH portrait"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card-body">
-              <h3 class="card-title media-font fade-in">HEMUSTBEFRWSH</h3>
-              <p class="genre">Hip Hop / Trap</p>
-
-              <p class="description">
-                Tshiamo Lehlohonolo Chabane, known as HeMustBeFrwshGod, is a Sebokeng-born rapper blending lyrical depth, cultural pride, and resilient storytelling into a sound rooted in authenticity, growth, and the undeniable spirit of Vaal.
-              </p>
-
-              <div class="social-links" aria-label="HEMUSTBEFRWSH social links">
-                <a href="https://www.youtube.com/channel/UCA0cSfgwJyz4RAgQ95qsZdA" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on YouTube">
-                  <i class="fab fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.tiktok.com/@hemustbefrwsh" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on TikTok">
-                  <i class="fab fa-tiktok" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.facebook.com/freshgodtoo/" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on Facebook">
-                  <i class="fab fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/hemustbefrwsh" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on Instagram">
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://audiomack.com/hemustbefrwsh-1" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBEFRWSH on Audiomack">
-                  <span class="audiomack_logo" aria-hidden="true"></span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- ========== Artist Card : HEMUSTBESWAE ========== -->
-          <article class="card artist-card" role="listitem">
-            <div class="artist-image">
-              <img
-                class="card-img"
-                src="./assets/images/swae.png"
-                alt="HEMUSTBESWAE portrait"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card-body">
-              <h3 class="card-title media-font fade-in">HEMUSTBESWAE</h3>
-              <p class="genre">Hip Hop / Trap</p>
-
-              <p class="description">
-              Andile Ramaidi, known as HeMustBeSwae, is a Sebokeng-born Hip Hop artist blending sharp lyricism, confident delivery, and modern trap influence into a sound driven by ambition, hustle, and the evolving energy of Vaal.
-              </p>
-
-              <div class="social-links" aria-label="HEMUSTBESWAE social links">
-                <a href="https://www.youtube.com/@hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on YouTube">
-                  <i class="fab fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.tiktok.com/@hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on TikTok">
-                  <i class="fab fa-tiktok" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.facebook.com/andile.ramaidi" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on Facebook">
-                  <i class="fab fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on Instagram">
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://audiomack.com/hemustbeswae" target="_blank" rel="noopener noreferrer" aria-label="HEMUSTBESWAE on Audiomack">
-                  <span class="audiomack_logo" aria-hidden="true"></span>
-                </a>
-              </div>
-            </div>
-          </article>
+        <!-- Product -->
+        <div class="card">
+            <img src="./graphics/images/products/Ts.png">
+            <h3>Signature Tee</h3>
+            <span>R400</span>
         </div>
-      </div>
-    </section>
 
-    <!-- =======================================================
-      Discography / Releases
-    ======================================================== -->
-    <section id="releases" class="section discography" aria-label="Music Releases">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title media-font">Music Releases</h2>
-          <p class="section-subtitle">Albums and singles from the collective.</p>
-        </header>
-
-
-
-        <!-- ========== Album : M00 Re Tswang (Deluxe) ========== -->
-<!-- Album metadata -->
-      <!-- ===== Deluxe Group ===== -->
-       <a class="links_to" href="https://www.youtube.com/watch?v=N9TLefTPK0s&list=OLAK5uy_kr557ihV11Fnc5CdbO27Kng2GNfwXfyvQ">
-
-         <div class="release-group" aria-label="Albums">
-           <h3 class="group-title">Deluxe</h3>
-           
-           <article class="release-card fade-in">
-             <div class="release-image">
-              <img
-              src="./assets/images/releases/m00-re-tswang.jpg"
-                alt="M00 Re Tswang album cover"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="release-info">
-              <h4 class="release-title">M00 Re Tswang Deluxe</h4>
-              <p class="artist">HEMUSTBEFRWSH &amp; HEMUSTBESWAE</p>
-              <p class="date">Released: 22 January 2026</p>
-              <p class="type">Deluxe • 8 Tracks</p>
-            </div>
-          </article>
+        <div class="card">
+            <img src="./graphics/images/products/Sweater.png">
+            <h3>Classic Hoodie</h3>
+            <span>R600</span>
         </div>
-      </a>
-        
 
-      <!-- Link to  -->
-       <a class="links_to" href="https://www.youtube.com/watch?v=6NxkjFAvxy0&list=OLAK5uy_nirsfFxdRT5auyb74yUsKvCgNLiay1XoQ&pp=0gcJCbYEOCosWNin">
-
-         <!-- ===== Album Group ===== -->
-         <div class="release-group" aria-label="Albums">
-           <h3 class="group-title">Album</h3>
-           
-          <article class="release-card fade-in">
-            <div class="release-image">
-              <img
-              src="./assets/images/releases/m00-re-tswang.jpg"
-                alt="M00 Re Tswang album cover"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="release-info">
-              <h4 class="release-title">M00 Re Tswang</h4>
-              <p class="artist">HEMUSTBEFRWSH &amp; HEMUSTBESWAE</p>
-              <p class="date">Released: 20 June 2025</p>
-              <p class="type">Album • 12 Tracks</p>
-            </div>
-          </article>
+        <div class="card">
+            <img src="./graphics/images/products/Cap.png">
+            <h3>Street Cap</h3>
+            <span>R150</span>
         </div>
-      </a>
 
-
-      <!-- Link to -->
-       <a class="links_to" href="https://www.youtube.com/watch?v=6ohgH-LwfJ8&list=OLAK5uy_k8aqHD_4HVvw_J1XZ5-hwF2Up34VdwsZg">
-
-         <!-- ===== Singles Group ===== -->
-         <div class="release-group" aria-label="Singles">
-           <h3 class="group-title">Singles</h3>
-           
-           <article class="release-card fade-in">
-             <div class="release-image">
-               <img
-               src="./assets/images/releases/mabana.jpeg"
-                alt="Mabana single cover"
-                loading="lazy"
-              />
-            </div>
-            <div class="release-info">
-              <h4 class="release-title">Mabana</h4>
-              <p class="artist">HEMUSTBEFRWSH &amp; HEMUSTBESWAE</p>
-              <p class="date">Released: 15 June 2025</p>
-              <p class="type">Single</p>
-            </div>
-          </article>
-        </a>
-
-        <a class="links_to" href="https://www.youtube.com/watch?v=thZHbO7Xfk8&list=OLAK5uy_kRko8f45FXYn57kEUY3rC2HBUW3IseE38">
-
-          <article class="release-card fade-in">
-            <div class="release-image">
-              <img
-              src="./assets/images/releases/tentoes.jpeg"
-              alt="Ten Toes single cover"
-              loading="lazy"
-              />
-            </div>
-            <div class="release-info">
-              <h4 class="release-title">Ten Toes</h4>
-              <p class="artist">HEMUSTBEFRWSH &amp; HEMUSTBESWAE</p>
-              <p class="date">Released: 2025</p>
-              <p class="type">Single</p>
-            </div>
-          </article>
-        </a>
-
-        <a class="links_to" href="https://www.youtube.com/watch?v=KHxxvyRJctQ&list=OLAK5uy_kFO02mIjHzcpVIy0XKcbRo8zhkDNkohPA">
-
-          <article class="release-card fade-in">
-            <div class="release-image">
-              <img
-              src="./assets/images/releases/Ready4Drama.jpeg"
-              alt="Ready4Drama single cover"
-              loading="lazy"
-              />
-            </div>
-            <div class="release-info">
-              <h4 class="release-title">Ready4Drama</h4>
-              <p class="artist">HEMUSTBEFRWSH</p>
-              <p class="date">Released: 3 December 2025</p>
-              <p class="type">Single</p>
-            </div>
-          </article>
-        </a>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- =======================================================
-      Featured Video
-    ======================================================== -->
-    <section class="section featured-video" aria-label="Featured Video">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">View Our Work</h2>
-          <p class="section-subtitle">A quick look at the sound and visuals.</p>
-        </header>
-
-        <!-- Responsive video wrapper (style in CSS) -->
-        <div class="video-frame fade-in">
-          <iframe
-            src="https://www.youtube.com/embed/FN5BNQYsKco?si=6tF2k83xVb6om-ET"
-            title="THEYMUSTBETHEMOBB - Featured Video"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-
-        </div>
-      </div>
-    </section>
-
-
-    
-
-  </main>
-
-
-
-
-
-  <!-- =========================================================
-    Footer
-  ========================================================== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <p class="date-footer">
-        THEYMUSTBETHEMOBB &copy; <span id="year"></span>
-      </p>
-
-      <!-- Optional: add a clean credit line if needed -->
-      <p class="designby">
-        <!-- Designed by Pule Mathikha
-              Severs: Github.com
-              Location: Sasolburg,Zamdela
-              ... -->
-      </p>
     </div>
-  </footer>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+
+    <p>© <span id="year"></span> SKYF LE MPAHLA</p>
+
+</footer>
+
+
+<!-- ===== JS ===== -->
+<script>
+// mobile toggle
+const toggle = document.getElementById("navToggle");
+const menu = document.getElementById("navMenu");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active"); // show/hide menu
+});
+
+// auto year
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
