@@ -1,0 +1,204 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+    --bg: #0a0a0a;          /* main background */
+    --card: #111;           /* cards */
+    --text: #fff;
+    --muted: #aaa;
+    --accent: #ffffff;
+
+    --radius: 12px;
+    --transition: 0.3s ease;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* container system (centers content) */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== NAVBAR ===== */
+.header {
+    border-bottom: 1px solid #222;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* logo */
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* hover effect */
+.nav-links a:hover {
+    color: var(--muted);
+}
+
+/* mobile */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+/* text */
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+/* button */
+.btn {
+    background: white;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* image */
+.hero-img img {
+    width: 300px;
+}
+
+/* ===== SECTION ===== */
+.section-title {
+    margin: 60px 0 20px;
+    font-size: 1.5rem;
+}
+
+/* ===== SHOP ===== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* card */
+.card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+/* hover */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* image */
+.card img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+/* text */
+.card h3 {
+    margin: 10px 0;
+}
+
+.card span {
+    color: var(--muted);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #222;
+    margin-top: 50px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .hero-img img {
+        margin-top: 20px;
+        width: 200px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
